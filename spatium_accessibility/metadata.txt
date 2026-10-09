@@ -2,7 +2,7 @@
 name = Spatium Labs Network
 description = Walking service areas, shortest paths, nearest facilities and origin-destination distance tables.
 about = Distance-based, bidirectional walking analysis using local line layers or OpenStreetMap. Service-area rings support polygon barriers and optional overlap. Native QGIS geometry; no external Python packages. OSM requires internet and sends the analysis bounding box to Overpass. Grade-separated roads, driving directions, turn restrictions and time-dependent speeds are not modeled. Turkish interface.
-version = 0.5.1
+version = 0.5.2
 qgisMinimumVersion = 3.28
 author = Spatium Labs
 email = melih44523@gmail.com

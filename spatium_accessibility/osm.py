@@ -49,7 +49,7 @@ def download(bbox, cancel=None):
                       headers={"User-Agent": "SpatiumAccessibility/0.1 (QGIS development)",
                                "Content-Type": "application/x-www-form-urlencoded"})
     chunks, size = [], 0
-    with urlopen(request, timeout=60) as response:
+    with urlopen(request, timeout=60) as response:  # nosec B310 - fixed HTTPS Overpass endpoint
         while True:
             check_cancel(cancel)
             chunk = response.read(65536)
