@@ -1,0 +1,51 @@
+{
+  "crs": "EPSG:32635",
+  "roads": 112,
+  "stops": 6,
+  "population_zones": 8,
+  "services": 6,
+  "snap_10m": {
+    "accepted": [
+      "S01",
+      "S02",
+      "S04",
+      "S06"
+    ],
+    "skipped": [
+      "S03",
+      "S05"
+    ]
+  },
+  "snap_20m": {
+    "accepted": [
+      "S01",
+      "S02",
+      "S03",
+      "S04",
+      "S06"
+    ],
+    "skipped": [
+      "S05"
+    ]
+  },
+  "snap_60m": {
+    "accepted": [
+      "S01",
+      "S02",
+      "S03",
+      "S04",
+      "S05",
+      "S06"
+    ],
+    "skipped": []
+  },
+  "disconnected": "S04 ana ızgaraya hiçbir mesafe eşiğinde bağlanmamalı.",
+  "preset": {
+    "distances_m": [
+      400,
+      800
+    ],
+    "snap_m": 10,
+    "offroad_m": 50
+  }
+}
