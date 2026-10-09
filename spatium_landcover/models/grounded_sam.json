@@ -1,0 +1,29 @@
+{
+  "schema": 1,
+  "name": "Grounding DINO + SAM · RGB aday çıkarımı",
+  "engine": "grounded_sam",
+  "detector": "IDEA-Research/grounding-dino-tiny",
+  "segmenter": "facebook/sam-vit-base",
+  "classes": [
+    {
+      "id": 1,
+      "name": "Bina adayı",
+      "prompt": "building roof",
+      "color": "#df6b4b"
+    },
+    {
+      "id": 2,
+      "name": "Tarla adayı",
+      "prompt": "agricultural field",
+      "color": "#b6c95b"
+    },
+    {
+      "id": 3,
+      "name": "Su yüzeyi adayı",
+      "prompt": "water body",
+      "color": "#4b9fce"
+    }
+  ],
+  "detector_revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+  "segmenter_revision": "70c1a07f894ebb5b307fd9eaaee97b9dfc16068f"
+}

@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "name": "HOTOSM DINOv3 · Uydu görüntüsünden bina çıkarımı",
+  "engine": "building_onnx",
+  "repository": "hotosm/dinov3s-buildings",
+  "threshold": 0.4371,
+  "license": "CC-BY-4.0; DINOv3 backbone has separate model terms",
+  "classes": [
+    {
+      "id": 1,
+      "name": "Bina adayı",
+      "color": "#df6b4b"
+    }
+  ],
+  "revision": "f7254545dfbbf10a40594d5a5fb62136902000ae"
+}

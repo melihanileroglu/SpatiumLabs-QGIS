@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "name": "Özel RGB segmentasyon modeli",
+  "engine": "onnx",
+  "weights": "model.onnx",
+  "input_size": 512,
+  "channels": [0, 1, 2, 3],
+  "mean": [0, 0, 0],
+  "std": [1, 1, 1],
+  "classes": [
+    {"id": 1, "name": "Bina adayı", "color": "#df6b4b"},
+    {"id": 2, "name": "Tarla adayı", "color": "#b6c95b"},
+    {"id": 3, "name": "Su yüzeyi adayı", "color": "#4b9fce"}
+  ]
+}

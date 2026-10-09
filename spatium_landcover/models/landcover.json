@@ -1,0 +1,67 @@
+{
+  "schema": 1,
+  "name": "SegFormer arazi örtüsü + HOTOSM bina çıkarımı",
+  "engine": "landcover_hybrid",
+  "threshold": 0.4371,
+  "cover_repository": "boehnen/satlens-segformer",
+  "cover_revision": "19cdd879e535d76e7fcbbd1e8b54dac9c1da90d6",
+  "license": "SegFormer checkpoint: MIT; HOTOSM checkpoint: CC-BY-4.0, backbone terms apply",
+  "building_model": {
+    "schema": 1,
+    "name": "HOTOSM DINOv3 · Uydu görüntüsünden bina çıkarımı",
+    "engine": "building_onnx",
+    "repository": "hotosm/dinov3s-buildings",
+    "threshold": 0.4371,
+    "license": "CC-BY-4.0; DINOv3 backbone has separate model terms",
+    "classes": [
+      {
+        "id": 1,
+        "name": "Bina adayı",
+        "color": "#df6b4b"
+      }
+    ],
+    "revision": "f7254545dfbbf10a40594d5a5fb62136902000ae"
+  },
+  "classes": [
+    {
+      "id": 1,
+      "name": "Bina",
+      "color": "#df6b4b"
+    },
+    {
+      "id": 5,
+      "name": "Yol yüzeyi",
+      "color": "#64748b"
+    },
+    {
+      "id": 4,
+      "name": "Ağaçlık alan",
+      "color": "#22845a"
+    },
+    {
+      "id": 6,
+      "name": "Otsu / çalı örtüsü",
+      "color": "#86b75c"
+    },
+    {
+      "id": 3,
+      "name": "Su yüzeyi",
+      "color": "#4b9fce"
+    },
+    {
+      "id": 2,
+      "name": "Tarım alanı adayı",
+      "color": "#d5b847"
+    },
+    {
+      "id": 7,
+      "name": "Yapılaşmış açık yüzey",
+      "color": "#b298ba"
+    },
+    {
+      "id": 8,
+      "name": "Çıplak zemin",
+      "color": "#b99168"
+    }
+  ]
+}
