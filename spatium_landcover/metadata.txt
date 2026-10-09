@@ -1,0 +1,20 @@
+[general]
+name = Spatium Labs Vision
+description = RGB image segmentation into editable land-cover polygons and reviewed training samples.
+version = 0.5.0
+qgisminimumversion = 3.28
+author = Spatium Labs
+category = Raster
+experimental = True
+hasprocessingprovider = False
+license = GPL-2.0-or-later
+about = Segments visible QGIS imagery or local georeferenced RGB rasters into candidate polygons. Requires a separate Python 3.10-3.12 environment with rasterio, shapely, pyproj, fiona, torch, transformers and onnxruntime; dependencies and model weights are downloaded on demand. No packages are installed into QGIS Python. Image rights and model terms apply. Outputs require manual review; no cadastral or crop identification guarantee. Turkish interface.
+icon = icon.png
+qgismaximumversion = 3.99
+email = melih44523@gmail.com
+deprecated = False
+homepage = https://github.com/melihanileroglu/SpatiumLabs-QGIS/tree/main/spatium_landcover
+repository = https://github.com/melihanileroglu/SpatiumLabs-QGIS
+tracker = https://github.com/melihanileroglu/SpatiumLabs-QGIS/issues
+tags = remote sensing,segmentation,land cover,buildings,RGB
+changelog = 0.5.0: Initial public preview. Animated introduction, documented installation and model dependencies, validated packages, Network barriers and ring outputs, Vision multiclass polygons and topology-aware simplification.
