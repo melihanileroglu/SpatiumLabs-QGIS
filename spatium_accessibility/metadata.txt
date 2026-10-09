@@ -1,0 +1,20 @@
+[general]
+name = Spatium Labs Network
+description = Walking service areas, shortest paths, nearest facilities and origin-destination distance tables.
+about = Distance-based, bidirectional walking analysis using local line layers or OpenStreetMap. Service-area rings support polygon barriers and optional overlap. Native QGIS geometry; no external Python packages. OSM requires internet and sends the analysis bounding box to Overpass. Grade-separated roads, driving directions, turn restrictions and time-dependent speeds are not modeled. Turkish interface.
+version = 0.5.0
+qgisminimumversion = 3.28
+author = Spatium Labs
+email = melih44523@gmail.com
+category = Vector
+experimental = True
+hasprocessingprovider = False
+tags = network,service area,accessibility,shortest path,OpenStreetMap
+license = GPL-2.0-or-later
+icon = icon.png
+qgismaximumversion = 3.99
+deprecated = False
+homepage = https://github.com/melihanileroglu/SpatiumLabs-QGIS/tree/main/spatium_accessibility
+repository = https://github.com/melihanileroglu/SpatiumLabs-QGIS
+tracker = https://github.com/melihanileroglu/SpatiumLabs-QGIS/issues
+changelog = 0.5.0: Initial public preview. Animated introduction, documented installation and model dependencies, validated packages, Network barriers and ring outputs, Vision multiclass polygons and topology-aware simplification.
