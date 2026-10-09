@@ -14,12 +14,15 @@ class GroundedSAM:
         self.device = 'cuda' if torch.cuda.is_available() else 'cpu'
         detector = config.get('detector','IDEA-Research/grounding-dino-tiny')
         segmenter = config.get('segmenter','facebook/sam-vit-base')
-        dkwargs={'revision':config.get('detector_revision','main'),'trust_remote_code':False}
-        skwargs={'revision':config.get('segmenter_revision','main')}
-        self.dp = AutoProcessor.from_pretrained(detector, **dkwargs)
-        self.dm = AutoModelForZeroShotObjectDetection.from_pretrained(detector, **dkwargs).to(self.device).eval()
-        self.sp = SamProcessor.from_pretrained(segmenter,**skwargs)
-        self.sm = SamModel.from_pretrained(segmenter,**skwargs).to(self.device).eval()
+        detector_revision = config['detector_revision']
+        segmenter_revision = config['segmenter_revision']
+        import re
+        if not all(re.fullmatch(r'[0-9a-f]{40}', revision) for revision in (detector_revision, segmenter_revision)):
+            raise ValueError('Model revisions must be immutable 40-character commit IDs.')
+        self.dp = AutoProcessor.from_pretrained(detector, revision=detector_revision, trust_remote_code=False)
+        self.dm = AutoModelForZeroShotObjectDetection.from_pretrained(detector, revision=detector_revision, trust_remote_code=False).to(self.device).eval()
+        self.sp = SamProcessor.from_pretrained(segmenter, revision=segmenter_revision, trust_remote_code=False)
+        self.sm = SamModel.from_pretrained(segmenter, revision=segmenter_revision, trust_remote_code=False).to(self.device).eval()
 
     def predict(self, rgb, classes, threshold):
         from PIL import Image

@@ -12,4 +12,4 @@ if __name__=='__main__':
     venv.create(folder,with_pip=True)
     python=folder/('Scripts/python.exe' if sys.platform=='win32' else 'bin/python')
     # Replace this process so cancellation also stops pip, without a detached child.
-    os.execv(str(python),[str(python),'-m','pip','install','--timeout','180','--retries','3','-r',str(Path(__file__).parent/'requirements.txt')])
+    os.execv(str(python),[str(python),'-m','pip','install','--timeout','180','--retries','3','-r',str(Path(__file__).parent/'requirements.txt')])  # nosec B606 - chosen Python executable, fixed pip arguments, no shell

@@ -1,7 +1,7 @@
 [general]
 name = Spatium Labs Vision
 description = RGB image segmentation into editable land-cover polygons and reviewed training samples.
-version = 0.5.1
+version = 0.5.2
 qgisMinimumVersion = 3.28
 author = Spatium Labs
 category = Raster

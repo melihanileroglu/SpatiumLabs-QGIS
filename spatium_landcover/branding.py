@@ -22,7 +22,7 @@ class SpatialIntro(QWidget):
     """Bounded, deterministic particles; animation uses elapsed time, not frame counts."""
     def __init__(self,module,parent=None):
         super().__init__(parent);self.module=module;self.setMinimumSize(640,390)
-        rng=Random(42)
+        rng=Random(42)  # nosec B311 - deterministic decorative points, no security use
         self.points=[(rng.uniform(-235,235),rng.uniform(-95,95),rng.uniform(0,2*pi)) for _ in range(100)]
         self.edges=[]
         for i,a in enumerate(self.points):

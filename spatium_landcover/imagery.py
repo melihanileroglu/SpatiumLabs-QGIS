@@ -70,7 +70,8 @@ def acquire(job,emit):
                         url=provider['url'].format(z=zoom,x=x,y=y)
                         request=Request(url,headers={'User-Agent':'SpatiumLabs-Earth/0.1'})
                         # Sequential requests, bounded payload, no hidden retries.
-                        with urlopen(request,timeout=30) as response: payload=response.read(8_000_001)
+                        with urlopen(request,timeout=30) as response:  # nosec B310 - validate_provider requires HTTPS
+                            payload=response.read(8_000_001)
                         if len(payload)>8_000_000: raise ValueError('Görüntü parçası boyut sınırını aştı.')
                         image=Image.open(BytesIO(payload))
                         if image.size!=(256,256): raise ValueError('Sağlayıcı 256 × 256 XYZ görüntü vermeli.')
